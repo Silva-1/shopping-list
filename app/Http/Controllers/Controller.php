@@ -26,20 +26,36 @@ class Controller extends BaseController
         $shopListId = $req_id->id;
         $data = Item::where('id', $shopListId)->first();
         $capsule = array('data' => $data);
-        return view('additem')->with($capsule);
+        //return $capsule;
+        return view('additem2')->with($capsule);
         
         //return view('additem');
     }
 
+    
     public function additem2(Request $req_id) {       
 
         $shopListId = $req_id->id;
-        $data = Item::where('shoplist_id', $shopListId)->firstOrFail();
+        $data = ShopList::where('id', $shopListId)->first();
         $capsule = array('data' => $data);
         return view('additem')->with($capsule);
-        //return $data;
-        //return view('additem');
+        
+   
     }    
+        
+    /*
+    CHATGPT
+    public function additem2(Request $request) {
+        // Get the shop list ID from the request object
+        $shopListId = $request->id;
+        // Retrieve the shop list data from the database
+        $shopList = ShopList::findOrFail($shopListId);
+        // Pass the shop list data to the 'additem' view to be displayed
+        return view('additem', compact('shopList'));
+    }
+    */
+    
+    
 
     public function addlist() {
         return view('addlist');

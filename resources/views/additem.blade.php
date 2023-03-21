@@ -30,7 +30,7 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="btn btn-danger " href="logout.php">Logout</a>
+                    <a class="btn btn-danger " href="{{ url('showLogin') }}">Logout</a>
                 </li>
 
         </div>
@@ -105,7 +105,7 @@
                                 <div class="form-group mb-3">
                                     <label for="">Shop List ID: </label>
                                     <input type="text" name="id"
-                                    value="{{ $data->shoplist_id ?? 'None'}}"
+                                    value="{{ $data->id ?? 'None'}}"
                                         class="form-control-product mb-3" required>
                                 </div>
                                 <!--<input type="hidden" name="id" value=

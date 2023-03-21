@@ -25,7 +25,7 @@ Route::get('/home', [App\Http\Controllers\Controller::class, 'home']);
 Route::get('/welcome', [App\Http\Controllers\Controller::class, 'welcome']);
 
 Route::get('/addlist', [App\Http\Controllers\Controller::class, 'addlist']);
-Route::get('/additem', [App\Http\Controllers\Controller::class, 'additem']);
+//Route::get('/additem', [App\Http\Controllers\Controller::class, 'additem']);
 
 Route::get('/additem2/{id}', [App\Http\Controllers\Controller::class, 'additem2']);
 Route::get('/additem/{id}', [App\Http\Controllers\Controller::class, 'additem']);

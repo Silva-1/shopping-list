@@ -1,0 +1,23 @@
+env_variables:
+  # Replace with your own values
+  APP_KEY: base64:tmvQHoEqldlmaqcGn41pYg1y86wFiutgUwB2vF/G5yI=
+  APP_DEBUG: true
+  APP_URL: http://localhost
+  LOG_CHANNEL: stack
+
+runtime: php81
+
+handlers:
+- url: /(.+\.(ico|jpg|png|gif))$
+  static_files: public/\1
+  upload: public/.+\.(ico|jpg|png|gif)$
+- url: /(.+\.(css|js))$
+  static_files: public/\1
+  upload: public/.+\.(css|js)$
+- url: /(.+\.(html|txt|xml|svg))$
+  static_files: public/\1
+  upload: public/.+\.(html|txt|xml|svg)$
+- url: /.*
+  script: auto
+
+  

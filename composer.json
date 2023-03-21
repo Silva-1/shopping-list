@@ -5,13 +5,16 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^8.2.0",
+        "php": "8.0.2",
         "guzzlehttp/guzzle": "^7.5",
         "laravel/framework": "^9.19",
         "laravel/passport": "^11.4",
         "laravel/sanctum": "^3.1",
         "laravel/tinker": "^2.7",
         "symfony/psr-http-message-bridge": "^2.1"
+
+        
+        
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
@@ -55,13 +58,18 @@
         }
     },
     "config": {
+        "platform": {
+            "php": "8.0.2"
+        },
         "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
         "allow-plugins": {
             "pestphp/pest-plugin": true
         }
+        
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "platform-check": false
 }
