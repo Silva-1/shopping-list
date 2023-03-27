@@ -21,7 +21,6 @@ return new class extends Migration
             $table->string('item_store',50);
             $table->string('item_quantity',50);
             $table->foreign('shoplist_id')->references('id')->on('shop_lists')->onDelete('cascade');
-            
         });
     }
 
