@@ -17,7 +17,7 @@ return new class extends Migration
         Schema::create('items', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('shoplist_id',50);
+            $table->int('shoplist_id',50);
             $table->string('item_name',50);
             $table->string('item_store',50);
             $table->string('item_quantity',50);
