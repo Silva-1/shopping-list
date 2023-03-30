@@ -1,7 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
+use App\Http\Controllers\Controller;
+use Illuminate\Http\Request;
 use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
@@ -9,12 +11,12 @@ use Illuminate\Routing\Controller as BaseController;
 use Laravel\Passport\HasApiTokens;
 use App\Models\Item;
 use App\Models\ShopList;
-use Illuminate\Http\Request;
 
-class Controller extends BaseController
+class ControllerApi extends Controller
 {
-    use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
-        
+    
+    use AuthorizesRequests, DispatchesJobs, ValidatesRequests; 
+    
     public function home() {
         return view('home');
     }
@@ -41,20 +43,6 @@ class Controller extends BaseController
    
     }    
         
-    /*
-    CHATGPT
-    public function additem2(Request $request) {
-        // Get the shop list ID from the request object
-        $shopListId = $request->id;
-        // Retrieve the shop list data from the database
-        $shopList = ShopList::findOrFail($shopListId);
-        // Pass the shop list data to the 'additem' view to be displayed
-        return view('additem', compact('shopList'));
-    }
-    */
-    
-    
-
     public function addlist() {
         return view('addlist');
     }

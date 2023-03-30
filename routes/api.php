@@ -33,13 +33,13 @@ Route::post('apiregister', [App\Http\Controllers\Api\UsersController::class, 'ap
 Route::post('apilogin', [App\Http\Controllers\Api\UsersController::class, 'apilogin'])->name('log');
 
 
-Route::get('/home', [App\Http\Controllers\Api\Controller::class, 'home']);
-Route::get('/welcome', [App\Http\Controllers\Api\Controller::class, 'welcome']);
+Route::get('/home', [App\Http\Controllers\Api\ControllerApi::class, 'home']);
+Route::get('/welcome', [App\Http\Controllers\Api\ControllerApi::class, 'welcome']);
 
-Route::get('/addlist', [App\Http\Controllers\Api\Controller::class, 'addlist']);
+Route::get('/addlist', [App\Http\Controllers\Api\ControllerApi::class, 'addlist']);
 
-Route::get('/additem2/{id}', [App\Http\Controllers\Api\Controller::class, 'additem2']);
-Route::get('/additem/{id}', [App\Http\Controllers\Api\Controller::class, 'additem']);
+Route::get('/additem2/{id}', [App\Http\Controllers\Api\ControllerApi::class, 'additem2']);
+Route::get('/additem/{id}', [App\Http\Controllers\Api\ControllerApi::class, 'additem']);
 
 //edit and delete
 Route::get('/edititem/{id}', [App\Http\Controllers\Api\ItemController::class, 'editItems']);
