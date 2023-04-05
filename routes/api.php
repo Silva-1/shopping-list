@@ -2,6 +2,8 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Api;
+use App\Http\Controllers\Api\UsersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +26,13 @@ Route::get('/', function () {
 });
 
 //Test
-Route::get('login', [App\Http\Controllers\Api\UsersController::class, 'index']);
+Route::get('test', [App\Http\Controllers\Api\UsersController::class, 'index']);
+
+Route::post('register', [UsersController::class, 'register']);
+Route::post('login', [UsersController::class, 'login']);
+
+
+
 
 Route::get('/showApiRegister', [App\Http\Controllers\Api\UsersController::class, 'showApiRegister']);
 Route::get('/showLogin', [App\Http\Controllers\Api\UsersController::class, 'showLogin']);
