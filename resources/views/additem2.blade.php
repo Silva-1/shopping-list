@@ -103,8 +103,8 @@
                                         class="form-control-product mb-3" required>
                                 </div>
                                 
-                                <div class="form-group mb-3">
-                                    <label for="">Shop List ID: </label>
+                                <div type="hidden" class="form-group mb-3">
+                                    
                                     <input type="hidden" name="id"
                                     value="{{ $data->shoplist_id ?? 'None'}}"
                                         class="form-control-product mb-3" required>

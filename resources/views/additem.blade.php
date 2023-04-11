@@ -104,7 +104,6 @@
                                 </div>
                                 
                                 <div class="form-group mb-3">
-                                    <label for="">Shop List ID: </label>
                                     <input type="hidden" name="id"
                                     value="{{ $data->id ?? 'None'}}"
                                         class="form-control-product mb-3" required>
