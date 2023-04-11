@@ -102,11 +102,13 @@
                                     <input type="number" min="1" name="item_quantity"
                                         class="form-control-product mb-3" required>
                                 </div>
+                                <!--
                                 <div class="form-group mb-3">
                                     <label for="">Shop List ID: </label>
                                     <input type="text" name="id"
-                                    value="{{ $data->id ?? 'None'}}"
+                                    value=
                                         class="form-control-product mb-3" required>
+                                -->
                                 </div>
                                 <!--<input type="hidden" name="id" value=
                                     class="form-control-product mb-3" required>
